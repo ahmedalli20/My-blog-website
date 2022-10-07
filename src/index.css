@@ -49,3 +49,37 @@
   .bloglists a {
     text-decoration: none;
   }
+
+/* createblogs new blog form */
+.createblogs {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .createblogs label {
+    text-align: left;
+    display: block;
+  }
+  .createblogs h2 {
+    font-size: 20px;
+    color: #0088a9;
+    margin-bottom: 30px;
+  }
+   .createblogs input, 
+  .createblogs textarea {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .createblogs button {
+    background: #0088a9;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
