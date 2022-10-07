@@ -1,6 +1,5 @@
 {
   "blogs": [
-    
     {
       "title": "How to be a good programmer",
       "body": "Book description: In June, 1954, eighteen-year-old Emmett Watson is driven home to Nebraska by the warden of the juvenile work farm where he has just served fifteen months for involuntary manslaughter. His mother long gone, his father recently deceased, and the family farm foreclosed upon by the bank, Emmett's intention is to pick up his eight-year-old brother, Billy, and head to California where they can start their lives anew. But when the warden drives away, Emmett discovers that two friends from the work farm have hidden themselves in the trunk of the warden's car. Together, they have hatched an altogether different plan for Emmett's future, one that will take them all on a fateful journey in the opposite direction—to the City of Nairobi.",
@@ -30,7 +29,12 @@
       "body": "Book description: In June, 1954, eighteen-year-old Emmett Watson is driven home to Nebraska by the warden of the juvenile work farm where he has just served fifteen months for involuntary manslaughter. His mother long gone, his father recently deceased, and the family farm foreclosed upon by the bank, Emmett's intention is to pick up his eight-year-old brother, Billy, and head to California where they can start their lives anew. But when the warden drives away, Emmett discovers that two friends from the work farm have hidden themselves in the trunk of the warden's car. Together, they have hatched an altogether different plan for Emmett's future, one that will take them all on a fateful journey in the opposite direction—to the City of New York.",
       "author": "Maahir Alli",
       "id": 5
+    },
+    {
+      "title": "How to Start a Blog",
+      "body": "It could be to share your opinions or to build a personal brand and establish yourself as an expert in your field. Before you can begin writing blog posts, you have to have a blog to post them on! There are a few things that are super important when it comes to starting and maintaining a blog, and we'll go over those now so you can get to writing ASAP.",
+      "author": "C. Nkunku",
+      "id": 6
     }
-    
   ]
 }
