@@ -83,3 +83,54 @@
     cursor: pointer;
   }
 
+
+  /* Login form */
+/* .login-page{
+  background-color:#0088a9;
+}  */
+
+
+  .register-form{
+    max-width: 400px;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .register-form input, 
+  .register-form textarea {
+    width: 100%;
+    padding: 12px 11px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .login-form{
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .login-form input, 
+  .login-form textarea {
+    width: 100%;
+    padding: 12px 11px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .message{
+    font-size: 20px;
+    color: #0088a9;
+    margin: 20px;
+  }
+   button {
+    background: #0088a9;
+    color: #fff;
+    border: 0;
+    margin: 20px;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
