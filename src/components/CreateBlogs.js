@@ -1,25 +1,25 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 const CreateBlogs = () => {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [author, setAuthor] = useState('');
 
-    const history = useHistory();
+    const navigate = useNavigate();
   
 
     const handleSubmit = (e) => {
         e.preventDefault();
          const blog = { title, body, author };
 
-        fetch('http://localhost:3004/blogs', {
+         fetch('http://localhost:3004/blogs', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog)
         }).then(() => {
           
-            history.push('/');
+            navigate('/Home');
         })
     }
 
@@ -49,7 +49,6 @@ const CreateBlogs = () => {
                     onChange={(e) => setAuthor(e.target.value)}
                 />
             <button>Add Blog</button>
-             {/* <button>Adding Blog</button>  */}
             </form>
         </div>
      );
