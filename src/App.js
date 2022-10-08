@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import CreateBlogs from "./components/CreateBlogs";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'; 
 import Login from './components/Login';
-import EditBlog from './components/EditBlog';
+
 
 
 
@@ -38,9 +38,9 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<Login  setIsLoggedIn={setIsLoggedIn}/> } />
             <Route  path="Home" element={ <Home blogs={blogs} />} />
-            <Route exact path="CreateBlogs" element={<CreateBlogs fetcher={fetcher}  />} />
+            <Route exact path="CreateBlogs" element={<CreateBlogs blogs={blogs} fetcher={fetcher}  />} />
             <Route path="blogs/:id" element={<BlogDetails  blogs={blogs}   fetcher={fetcher}  />}   />
-            <Route path="CreateBlogs/edit/:id" element={<CreateBlogs fetcher={fetcher} />}   />
+            <Route path="CreateBlogs/edit/:id" element={<CreateBlogs blogs={blogs} fetcher={fetcher} />}   />
           </Routes>
         </div>
       </div>
