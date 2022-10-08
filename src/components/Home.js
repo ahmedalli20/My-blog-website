@@ -11,13 +11,13 @@ const Home = ({blogs}) => {
 
     return (
         <div>
-              <BlogList blogs={blogs} title="All Blogs"/>  
+              <BlogList blogs={blogs} title="My Blog Items"/>  
               
 
         </div>
 
 
-    );
+    ); 
 };
 
 export default Home;
