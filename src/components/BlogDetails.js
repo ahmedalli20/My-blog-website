@@ -1,36 +1,47 @@
 import React from 'react';
-  import { useParams, useNavigate } from 'react-router-dom';
+  import { useParams, useNavigate, } from 'react-router-dom';
  import BlogList from './BlogList';
 
 
-const BlogDetails = ({blogs}) => {
-    console.log(blogs);
-
+const BlogDetails = ({blogs , fetcher}) => {
+    // console.log(blogs);
+       
         const { id } = useParams();
          const navigate = useNavigate();
-
-
-        //  blogs.filter(blog => (
-//          return blog.id === id
-        // ))
-
+        //  console.log(id)
+     
+         const blogDetail = blogs.map((blog) => {
+            // console.log(blog.title)
+            if (blog.id == id) {
+              return <div  key={blog.id} >
+   
+               <h2>{blog.title}</h2>
+                <p>Written by {blog.author}</p>
+               <div className='body'>{blog.body}</div>
+                
+               </div>
+              ; 
+            }
+          });
+       
+  
  
-    const handleClick = () => {
-        fetch(`http://localhost:3004/blogs/${blogs.id}` ,{
-            method: 'DELETE'
+    const handleDelete = (id) => {
+        fetch('http://localhost:3004/blogs/'+ id,{
+             method: 'DELETE'
         }).then(() => {
+            console.log(id)
              navigate('/Home');
-        })
+             fetcher()
+            })
     }
     return (
-        <div>
+        < div className='details'>
 
-        <h2>{blogs.title}</h2>
-        <p>Written by {blogs.author}</p>
-        <div>{blogs.body}</div>
-        <button onClick={handleClick}>Delete</button>   
-
-        </div>
+         {blogDetail}
+         {/* <a href={`edit/${blog.id}`}><h3>Edit Details</h3></a> */}
+         <button onClick={()=>handleDelete(id)} >Delete</button>   
+         </div>
 
         
     );
