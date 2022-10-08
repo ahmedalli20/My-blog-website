@@ -69,7 +69,7 @@ return (
             placeholder="password"/>
 
           <button type="submit" onClick={showLogin} >create account</button>
-          
+
           <p className="message">Already registered? <span onClick={showLogin} >Sign In</span></p>
       </form>
 
@@ -79,8 +79,8 @@ return (
          <input  
           name="username" 
            onBlur={handleChange} 
+           required 
            type="text"
-            required 
            placeholder="Username"/>
 
          <input   
