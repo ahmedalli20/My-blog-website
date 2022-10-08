@@ -1,25 +1,58 @@
-import { useState } from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import {  useParams, useNavigate } from 'react-router-dom';
 
-const CreateBlogs = () => {
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
-    const [author, setAuthor] = useState('');
+const CreateBlogs = ({blogs,fetcher}) => {
+    // const [title, setTitle] = useState('');
+    // const [body, setBody] = useState('');
+    // const [author, setAuthor] = useState('');
+    const params = useParams()
+    const [id, setId] = useState(params.id)
+
+
 
     const navigate = useNavigate();
-  
+
+   
+
+    const [formData, setFormData] = useState({
+        title:"",
+        body:"",
+        author:"",
+    })
+
+    function handleInputChange (event){
+        setFormData({
+          ...formData,
+          [event.target.name]: event.target.value
+      });
+    }
+   
+
+    // const blog = { title, body, author };
+
+    useEffect(()=>{
+        if(id){
+            fetch(`http://localhost:3004/blogs/${id}`)
+            .then(resp=>resp.json())
+            .then((item)=>{
+                setFormData(item);
+            })
+        }},
+       [id]
+    );
 
     const handleSubmit = (e) => {
         e.preventDefault();
-         const blog = { title, body, author };
+        
 
-         fetch('http://localhost:3004/blogs', {
-            method: 'POST',
+         fetch(`http://localhost:3004/blogs/${id ? '/'+id : ''}`, {
+            method: id ? "PUT" : "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(blog)
+            body: JSON.stringify(blogs)
         }).then(() => {
           
             navigate('/Home');
+            fetcher()
         })
     }
 
@@ -31,22 +64,25 @@ const CreateBlogs = () => {
                 <input 
                     type="text"
                     required
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    name='title' 
+                    onChange={handleInputChange} 
+                    value={formData.title}
                 />
                 <label>Blog Body:</label>
                 <textarea
                     required
-                    value={body}
-                    onChange={(e) => setBody(e.target.value)}
+                    name='body' 
+                    onChange={handleInputChange}
+                    value={formData.body} 
                 />
                 <label>Blog author:</label>
 
                 <input 
                     type="text"
                     required
-                    value={author}
-                    onChange={(e) => setAuthor(e.target.value)}
+                    name='author' 
+                    onChange={handleInputChange}
+                    value={formData.author} 
                 />
             <button>Add Blog</button>
             </form>
