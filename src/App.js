@@ -6,12 +6,15 @@ import Navbar from './components/Navbar';
 import CreateBlogs from "./components/CreateBlogs";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'; 
 import Login from './components/Login';
+import EditBlog from './components/EditBlog';
 
 
 
 const App = () => {
   const[blogs, setBlogs] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+
   const fetcher = () =>{
       fetch("http://localhost:3004/blogs")
       .then((response) => response.json())
@@ -35,8 +38,9 @@ const App = () => {
           <Routes>
             <Route exact path="/" element={<Login  setIsLoggedIn={setIsLoggedIn}/> } />
             <Route  path="Home" element={ <Home blogs={blogs} />} />
-            <Route path="CreateBlogs" element={<CreateBlogs  />} />
-            <Route path="blogs/:id" element={<BlogDetails  blogs={blogs} />}   />
+            <Route exact path="CreateBlogs" element={<CreateBlogs fetcher={fetcher}  />} />
+            <Route path="blogs/:id" element={<BlogDetails  blogs={blogs}   fetcher={fetcher}  />}   />
+            <Route path="CreateBlogs/edit/:id" element={<CreateBlogs fetcher={fetcher} />}   />
           </Routes>
         </div>
       </div>
