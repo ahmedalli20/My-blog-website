@@ -1,6 +1,6 @@
 import React from 'react';
   import { useParams, useNavigate, } from 'react-router-dom';
- import BlogList from './BlogList';
+//  import BlogList from './BlogList';
 
 
 const BlogDetails = ({blogs , fetcher}) => {
@@ -39,7 +39,7 @@ const BlogDetails = ({blogs , fetcher}) => {
         < div className='details'>
 
          {blogDetail}
-         {/* <a href={`edit/${blog.id}`}><h3>Edit Details</h3></a> */}
+         <a href={`CreateBlogs/edit/${id}`}><button>Edit Details</button></a>
          <button onClick={()=>handleDelete(id)} >Delete</button>   
          </div>
 
