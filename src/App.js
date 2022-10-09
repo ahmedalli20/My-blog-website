@@ -16,7 +16,7 @@ const App = () => {
 
 
   const fetcher = () =>{
-      fetch("https://myblog-ahmed.herokuapp.com/blogs")
+      fetch("https://calm-newt-belt.cyclic.app/blogs")
       .then((response) => response.json())
       .then((data) => {
            console.log(data)

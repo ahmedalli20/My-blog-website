@@ -26,7 +26,7 @@ const CreateBlogs = ({blogs , fetcher}) => {
 
     useEffect(()=>{
         if(id){
-            fetch(`https://myblog-ahmed.herokuapp.com/blogs/${id}`)
+            fetch(`https://calm-newt-belt.cyclic.app/blogs/${id}`)
             .then(resp=>resp.json())
             .then((item)=>{
                 setFormData(item);
@@ -39,7 +39,7 @@ const CreateBlogs = ({blogs , fetcher}) => {
         e.preventDefault();
        
 
-         fetch(`https://myblog-ahmed.herokuapp.com/blogs/${id ? '/'+id : ''}`, {
+         fetch(`https://calm-newt-belt.cyclic.app/blogs/${id ? '/'+id : ''}`, {
             method: id ? "PATCH" : "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formData)

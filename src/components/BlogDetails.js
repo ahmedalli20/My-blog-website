@@ -29,7 +29,7 @@ const BlogDetails = ({blogs , fetcher}) => {
   
  
     const handleDelete = (id) => {
-        fetch('https://myblog-ahmed.herokuapp.com/blogs/'+ id,{
+        fetch('https://calm-newt-belt.cyclic.app/blogs/'+ id,{
              method: 'DELETE'
         }).then(() => {
             console.log(id)
