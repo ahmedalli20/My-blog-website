@@ -1,18 +1,12 @@
 import { useState, useEffect } from 'react';
 import {  useParams, useNavigate } from 'react-router-dom';
 
-const CreateBlogs = ({blogs,fetcher}) => {
-    // const [title, setTitle] = useState('');
-    // const [body, setBody] = useState('');
-    // const [author, setAuthor] = useState('');
+const CreateBlogs = ({blogs , fetcher}) => {
+ 
     const params = useParams()
-    const [id, setId] = useState(params.id)
-
-
+    const [id] = useState(params.id)
 
     const navigate = useNavigate();
-
-   
 
     const [formData, setFormData] = useState({
         title:"",
@@ -40,15 +34,15 @@ const CreateBlogs = ({blogs,fetcher}) => {
         }},
        [id]
     );
-
+    console.log(blogs)
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+       
 
          fetch(`http://localhost:3004/blogs/${id ? '/'+id : ''}`, {
-            method: id ? "PUT" : "POST",
+            method: id ? "PATCH" : "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(blogs)
+            body: JSON.stringify(formData)
         }).then(() => {
           
             navigate('/Home');
