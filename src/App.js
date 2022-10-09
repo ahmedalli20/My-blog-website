@@ -16,7 +16,7 @@ const App = () => {
 
 
   const fetcher = () =>{
-      fetch("http://localhost:3000/blogs")
+      fetch("https://calm-newt-belt.cyclic.app/blogs")
       .then((response) => response.json())
       .then((data) => {
            console.log(data)
