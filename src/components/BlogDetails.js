@@ -12,8 +12,8 @@ const BlogDetails = ({blogs , fetcher}) => {
      
          const blogDetail = blogs.map((blog) => {
             // console.log(blog.title)
-            // if (blog.id == id) 
-              return <div  key={id} >
+            if (blog.id == id){ 
+              return <div  key={blog.id} >
    
                <h2>{blog.title}</h2>
                 <p>Written by {blog.author}</p>
@@ -21,13 +21,13 @@ const BlogDetails = ({blogs , fetcher}) => {
                 
                </div>
               ; 
-            
+            }
           });
        
   
  
     const handleDelete = (id) => {
-        fetch('http://localhost:3000/blogs/'+ id,{
+        fetch('https://calm-newt-belt.cyclic.app/blogs/'+ id,{
              method: 'DELETE'
         }).then(() => {
             console.log(id)
