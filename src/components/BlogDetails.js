@@ -11,6 +11,7 @@ const BlogDetails = ({blogs , fetcher}) => {
         //  console.log(id)
      
          const blogDetail = blogs.map((blog) => {
+            
             // console.log(blog.title)
             if (blog.id == id){ 
               return <div  key={blog.id} >
@@ -22,12 +23,13 @@ const BlogDetails = ({blogs , fetcher}) => {
                </div>
               ; 
             }
+          
           });
        
   
  
     const handleDelete = (id) => {
-        fetch('https://calm-newt-belt.cyclic.app/blogs/'+ id,{
+        fetch('https://myblog-ahmed.herokuapp.com/blogs/'+ id,{
              method: 'DELETE'
         }).then(() => {
             console.log(id)
