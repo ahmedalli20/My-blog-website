@@ -12,14 +12,14 @@ import Login from './components/Login';
 
 const App = () => {
   const[blogs, setBlogs] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [ setIsLoggedIn] = useState(false)
 
 
   const fetcher = () =>{
-      fetch("http://localhost:3004/blogs")
+      fetch("http://localhost:3000/blogs")
       .then((response) => response.json())
       .then((data) => {
-          //  console.log(data)
+           console.log(data)
         setBlogs(data);
           });
   }

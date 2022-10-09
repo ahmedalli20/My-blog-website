@@ -27,7 +27,7 @@ const BlogDetails = ({blogs , fetcher}) => {
   
  
     const handleDelete = (id) => {
-        fetch('http://localhost:3004/blogs/'+ id,{
+        fetch('http://localhost:3000/blogs/'+ id,{
              method: 'DELETE'
         }).then(() => {
             console.log(id)
