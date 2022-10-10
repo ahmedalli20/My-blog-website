@@ -1,10 +1,10 @@
 # myblog-website
  ## By AHMED ALI
-###Login Page
+### Login Page
 ![login page](https://github.com/ahmedalli20/My-blog-website/blob/master/login.png)
-###Bloglists Page
+### Bloglists Page
 ![login page](https://github.com/ahmedalli20/My-blog-website/blob/master/bloglist.png)
-###Blogpost Page
+### Blogpost Page
 ![login page](https://github.com/ahmedalli20/My-blog-website/blob/master/blogpost.png)
 
  ## Table of Content
