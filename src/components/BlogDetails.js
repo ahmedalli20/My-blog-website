@@ -6,43 +6,36 @@ import React from 'react';
 const BlogDetails = ({blogs , fetcher}) => {
     // console.log(blogs);
        
-        const { id } = useParams();
+        const { title } = useParams();
          const navigate = useNavigate();
         //  console.log(id)
      
-         const blogDetail = blogs.map((blog) => {
-            
-            // console.log(blog.title)
-            if (blog.id == id){ 
-              return <div  key={blog.id} >
-   
-               <h2>{blog.title}</h2>
-                <p>Written by {blog.author}</p>
-               <div className='body'>{blog.body}</div>
-                
-               </div>
-              ; 
-            }
-          
-          });
+        const blogDetails = blogs.filter((post) => post.title === title).map((blog) =>          
+        <div key={blog.id}>
+            <h2>{blog.title}</h2>
+            <p>Written by {blog.author}</p>
+            <div className='body'>{blog.body}</div>
+            <a href={`CreateBlogs/edit/${blog.id}`}><button>Edit Details</button></a>
+            <button onClick={()=>handleDelete(blog)} >Delete</button> 
+        </div>
+    )
        
   
  
-    const handleDelete = (id) => {
-        fetch('https://calm-newt-belt.cyclic.app/blogs/'+ id,{
-             method: 'DELETE'
-        }).then(() => {
-            console.log(id)
-             navigate('/Home');
-             fetcher()
-            })
-    }
+    const handleDelete = (blog) => {
+      fetch(`https://calm-newt-belt.cyclic.app/blogs/${blog.id}`, {
+           method: 'DELETE'
+      }).then(() => {
+          console.log(blog.id)
+           navigate('/Home');
+           fetcher()
+          })
+  }
     return (
         < div className='details'>
 
-         {blogDetail}
-         <a href={`CreateBlogs/edit/${id}`}><button>Edit Details</button></a>
-         <button onClick={()=>handleDelete(id)} >Delete</button>   
+         {blogDetails}
+            
          </div>
 
         

@@ -7,7 +7,7 @@ function Login ({setIsLoggedIn}){
  
     const [displayForm, setDisplayForm]= useState('none')
     const [hideForm, setHideForm] = useState('')
-    const [ setDisplay] = useState('none')
+    const [ display, setDisplay] = useState('none')
     const navigate = useNavigate();
     const [formInput, setFormInput] = useState(
       {
