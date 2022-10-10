@@ -1,7 +1,7 @@
 # myblog-website
  ## By AHMED ALI
 
-
+ ## Screenshot![Screenshot from 2022-09-01 11-14-01.png]
 
 
  ## Table of Content
@@ -40,7 +40,7 @@ As a user of the web app,you will be able to :
 
 
 ### Live Link
-- Click this link to view the live application 
+- Click this link to view the live application https://ahmedalli20.github.io/My-blog-website/ 
 
 
 ### Technology Used
