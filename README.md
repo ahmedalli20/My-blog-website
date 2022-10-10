@@ -1,11 +1,11 @@
 # myblog-website
  ## By AHMED ALI
 ###Login Page
-![login page](https://github.com/ahmedalli20/My-blog-website/blob/[branch]/login.png)
+![login page](https://github.com/ahmedalli20/My-blog-website/blob/master/login.png)
 ###Bloglists Page
-![login page](https://github.com/ahmedalli20/My-blog-website/blob/[branch]/bloglist.png)
+![login page](https://github.com/ahmedalli20/My-blog-website/blob/master/bloglist.png)
 ###Blogpost Page
-![login page](https://github.com/ahmedalli20/My-blog-website/blob/[branch]/blogpost.png)
+![login page](https://github.com/ahmedalli20/My-blog-website/blob/master/blogpost.png)
 
  ## Table of Content
  - [Description](#description)
