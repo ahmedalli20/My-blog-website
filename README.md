@@ -1,8 +1,11 @@
 # myblog-website
  ## By AHMED ALI
-
- ## Screenshot![Screenshot from 2022-09-01 11-14-01.png]
-
+###Login Page
+![login page](https://github.com/ahmedalli20/My-blog-website/blob/[branch]/login.png)
+###Bloglists Page
+![login page](https://github.com/ahmedalli20/My-blog-website/blob/[branch]/bloglist.png)
+###Blogpost Page
+![login page](https://github.com/ahmedalli20/My-blog-website/blob/[branch]/blogpost.png)
 
  ## Table of Content
  - [Description](#description)
